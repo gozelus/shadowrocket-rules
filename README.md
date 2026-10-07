@@ -7,10 +7,12 @@
 小火箭 → 底部「配置」→ 右上角「+」→「从 URL 下载…」→ 粘贴：
 
 ```
-https://cdn.jsdelivr.net/gh/gozelus/shadowrocket-rules@main/claude-guard.conf
+https://raw.githubusercontent.com/gozelus/shadowrocket-rules/main/claude-guard.conf
 ```
 
-（如果上面这个下载失败，备用 GitHub 直连：`https://raw.githubusercontent.com/gozelus/shadowrocket-rules/main/claude-guard.conf`）
+（备用 jsDelivr 镜像：`https://cdn.jsdelivr.net/gh/gozelus/shadowrocket-rules@main/claude-guard.conf`，注意镜像有 CDN 缓存，新版推送后几小时内可能还是旧版）
+
+本配置基于社区广泛使用的 [johnshall/Shadowrocket-ADBlock-Rules-Forever](https://github.com/johnshall/Shadowrocket-ADBlock-Rules-Forever) 的 `lazy_group.conf` 修改，**唯一改动**：在 `[Rule]` 顶部插入 16 条 Claude-Guard 规则（指向 AI 策略组），其余内容与上游完全一致。导入后把首页「AI」策略组选为 PROXY（=首页当前节点），首页节点固定不切换。
 
 下载完成后：在「配置」页点击 `claude-guard.conf` → 弹出菜单选「**使用配置**」。
 
