@@ -1,6 +1,6 @@
 # Shadowrocket 配置（2.2.92）
 
-在 [Johnshall 的社区懒人配置](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever) 上补充 Claude 分流和 DNS 隐私设置，保留 Google、Twitter、YouTube、Telegram 等原有规则。版本 `0.0.0.1`，来源与差异见 [UPSTREAM.md](UPSTREAM.md)。没有附带节点、账号、密码或证书。
+在 [Johnshall 的社区懒人配置](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever) 上补充 Claude 分流和 DNS 隐私设置，保留 Google、Twitter、YouTube、Telegram 等原有规则。版本 `0.0.0.1`，来源与差异见 [UPSTREAM.md](UPSTREAM.md)，变更见 [更新记录](CHANGELOG.md)。没有附带节点、账号、密码或证书。
 
 ## 导入
 
