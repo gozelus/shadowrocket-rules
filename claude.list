@@ -1,0 +1,32 @@
+# NAME: Claude-Guard
+# AUTHOR: gozelus (based on blackmatrix7/ios_rule_script & v2fly/domain-list-community)
+# REPO: https://github.com/gozelus/shadowrocket-rules
+# UPDATED: 2026-10-07
+# 用途: Anthropic/Claude 全家桶 + 人机验证 + 统计/遥测触点,统一走代理,防止地区误判
+# 用法: 小火箭 → 配置 → 添加规则链接,行为选择「代理」(建议指向固定策略组/节点)
+
+# ---- Claude / Anthropic 官方域名 (对齐 v2fly domain-list-community) ----
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claude.dev
+DOMAIN,servd-anthropic-website.b-cdn.net
+
+# ---- 官网统计 (blackmatrix7 Claude.list) ----
+DOMAIN,cdn.usefathom.com
+
+# ---- Cloudflare 人机验证 (必须与主流量同出口,否则验证循环) ----
+DOMAIN-SUFFIX,challenges.cloudflare.com
+
+# ---- 功能开关/A-B 测试 (Statsig) ----
+DOMAIN-SUFFIX,api.statsig.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+
+# ---- 崩溃/性能遥测 (Sentry + Datadog 全机房) ----
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-KEYWORD,datadog
