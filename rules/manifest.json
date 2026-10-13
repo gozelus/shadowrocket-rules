@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "snapshot_date": "2026-10-11",
+  "source_format": "v2ray routercommon protobuf",
+  "inputs": {
+    "geosite_sha256": "2c185fdfac8f0aac556cfceee6b66b9353779d3ef6deff3b4acc0132d7515546",
+    "geoip_sha256": "af332ab88eb4bb15e3cd10f03f5542e90655ee4bd5bf0e23949cfbd1e46bc20f"
+  },
+  "omitted": [
+    {
+      "dataset": "private",
+      "type": "regex",
+      "value": "^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$"
+    }
+  ],
+  "files": {
+    "cn-domains.list": {
+      "rules": 111812,
+      "sha256": "b8f620d6c65f21c7739f25255019550ff8b8bc3bf5d13137b33fc370fc99792f"
+    },
+    "private-domains.list": {
+      "rules": 130,
+      "sha256": "cf4e6ec512fd610d610ed4dc01f58b454752bf7c994e2d411ce360a5e383c6e9"
+    },
+    "apple-domains.list": {
+      "rules": 1788,
+      "sha256": "f4e3b34f3372110ee9b5376853dd7420706083901588e0c287ad1eb1515c410d"
+    },
+    "microsoft-domains.list": {
+      "rules": 749,
+      "sha256": "e61c90ca3481a4966f2228f5437898ace6bf1421b6c4d0d6afadf411cc0e3754"
+    },
+    "github-domains.list": {
+      "rules": 63,
+      "sha256": "6afc430ca3184e0054b09cd642005346d73afd223b17e5cdcfab3e722f2a6b2e"
+    },
+    "github-copilot-domains.list": {
+      "rules": 6,
+      "sha256": "70abddebcad4c9674dee4ad3b45bf67787955e5894df96da27d57db01a69ca53"
+    },
+    "github-copilot-proxy.list": {
+      "rules": 67,
+      "sha256": "539e3d9ccfd7cbf6523b9b7fd1107888f291401ad8501dc0c59b8dad75d6bb74"
+    },
+    "cn-ip.list": {
+      "rules": 5817,
+      "sha256": "fc0b86f592f632ea911b9751e0c843bf80916346d3ad8636b0eedc997c0d57e9"
+    }
+  }
+}
