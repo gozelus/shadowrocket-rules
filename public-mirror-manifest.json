@@ -377,5 +377,6 @@
     "Desktop domain/IP rules are mirrored, but native iOS behavior is unverified.",
     "PASS-RULE is an internal Mihomo sentinel, not a proxy server.",
     "Domestic direct exceptions remain; no promise of fail-closed behavior when VPN is switched off."
-  ]
+  ],
+  "mobileExitSelection": "Home currently selected proxy; node remark is not hardcoded"
 }

@@ -10,6 +10,10 @@ m = json.loads((ROOT / 'public-mirror-manifest.json').read_text(encoding='utf-8'
 assert not text.split('[Proxy]\n', 1)[1].split('[Proxy Group]', 1)[0].strip()
 assert 'RULE-SET,' not in text and 'raw.githubusercontent.com' not in text
 assert 'password=' not in text.lower() and 'username=' not in text.lower()
+assert m['policyMap']['海外TCP'] + ' = select,PROXY,policy-select-name=PROXY' in text
+for line in text.splitlines():
+    if line.startswith(('dns-server =', 'fallback-dns-server =')):
+        assert all(v.strip().endswith('#proxy') for v in line.split('=', 1)[1].split(',')), 'DNS must follow the selected home proxy'
 group = next(l for l in text.splitlines() if l.startswith(m['transitGroup'] + ' = ')).split(' = ', 1)[1].split(',')
 assert group[0] == 'select' and group[1:-1] == m['transitMembers']
 assert group[-1] == 'policy-select-name=' + m['sourceTransit']
